@@ -1,0 +1,50 @@
+.about_app {
+    height: 250px;
+    padding: 0 70px;
+    background: var(--bg-py);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    border-radius: 15px;
+    margin-top: 50px;
+}
+
+.about_app-body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.about_app-body p {
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.about_app-bodyApps {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.about_app-bodyApps img {
+    height: 40px;
+}
+
+@media screen and (max-width: 990px) {
+    .about_app-img {
+        display: none;
+    }
+    .about_app-body {
+        width: 100%;
+        gap: 25px;
+    }
+    .about_app {
+        height: 300px;
+        align-items: center;
+    }
+}

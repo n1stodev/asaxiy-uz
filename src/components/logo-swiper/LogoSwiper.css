@@ -1,0 +1,29 @@
+.logo_swiper {
+    width: 100%;
+    padding: 35px 0;
+    background: var(--bg-py);
+    margin-top: 50px;
+}
+
+.logo_swiper .mySwiper {
+    height: 120px;
+    width: 100%;
+    background: #fff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.logo_swiper-item {
+    height: 100%;
+    position: relative;
+}
+
+.logo_swiper-item img {
+    width: 70%;
+    border-radius: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

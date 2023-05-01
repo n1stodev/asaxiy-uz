@@ -1,0 +1,169 @@
+.header {
+    width: 100%;
+    box-shadow: 0 5px 15px #0001;
+    position: sticky;
+    top: 0;
+    left: 0;
+    margin-bottom: 15px;
+    z-index: 15;
+    background: #fff;
+}
+
+.header hr {
+    background: #ddd;
+    height: 1px;
+    border: none;
+    outline: none;
+}
+
+.navbar {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav__logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav__search {
+    height: 34px;
+    display: flex;
+    flex: 1;
+    border: 2px solid var(--bg-py);
+    border-radius: 8px;
+    position: relative;
+    background: var(--bg-py);
+}
+
+.nav__search input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    text-indent: 15px;
+}
+
+.nav__search button {
+    padding: 0 15px;
+    height: 100%;
+    border-radius: 7px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    background: var(--bg-py);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav__links {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+.nav__link {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 12px;
+    font-weight: 400;
+    width: 37px;
+}
+
+.nav__link img {
+    height: 20px;
+}
+
+.nav__link:first-child {
+    display: none;
+}
+
+.nav__bottom {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+    align-items: center;
+    overflow: auto;
+}
+
+.nav__bottom span {
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.nav__btm-span:nth-child(2) {
+    color: #fff;
+    background: #f00;
+    padding: 2px 7px;
+    border-radius: 5px;
+}
+
+.nav__bottom button {
+    border: none;
+    outline: none;
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    background: none;
+    height: 30px;
+}
+
+.nav__bottom button svg {
+    font-size: 17px;
+    color: var(--bg-py);
+}
+
+@media screen and (max-width: 990px) {
+    .nav__links {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        justify-content: space-evenly;
+        border-top: 1px solid #ddd;
+        background: #fff;
+        z-index: 11;
+    }
+    .nav__link {
+        flex-direction: column;
+    }
+    
+    .nav__link:first-child {
+        display: flex;
+    }
+    .nav__link span {
+        font-size: 12px;
+    }
+    .nav__bottom {
+        padding: 10px 20px;
+        gap: 35px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .navbar {
+        flex-wrap: wrap;
+        height: auto;
+        gap: 10px;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+    .nav__katalog-btn span {
+        display: none;
+    }
+    .nav__search {
+        flex: none;
+        width: 100%;
+    }
+}

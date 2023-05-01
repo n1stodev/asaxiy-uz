@@ -1,0 +1,79 @@
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.banner .mySwiper {
+    width: 75%;
+    height: 400px;
+}
+
+.banner .mySwiper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.banner__advert {
+    background: url(https://assets.asaxiy.uz/uploads/toptoday/mobile/644be2cac1dcf.jpeg) no-repeat center/cover;
+    height: 400px;
+    width: 25%;
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 500;
+    gap: 4px;
+    color: var(--bg-py);
+}
+
+.banner__advert span {
+    color: #fff;
+    background: var(--bg-py);
+    width: 28px;
+    height: 28px;
+    display: flex;
+    font-weight: 400;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+@media screen and (max-width: 990px) {
+    .banner .mySwiper {
+        height: 300px;
+    }
+    .banner__advert {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .banner .mySwiper {
+        height: 250px;
+        width: 100%;
+    }
+    .banner .banner {
+        flex-direction: column-reverse;
+    }
+    .banner__advert {
+        width: 100%;
+        height: 250px;
+        background-image: url(https://assets.asaxiy.uz/uploads/toptoday/desktop/644be2b22e14f.jpeg);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .banner .mySwiper {
+        height: 160px;
+    }
+    .banner__advert {
+        height: 160px;
+    }
+}
