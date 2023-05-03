@@ -10,6 +10,7 @@ function SingleRoute() {
     const dispatch = useDispatch()
     const data = useLocation().state
     const heart = useSelector(s => s.heart)
+    const holat = true
     return (
         <div className='single_route container'>
             <div className="single-route__images">
@@ -53,7 +54,7 @@ function SingleRoute() {
                     <span>0 ta sharx</span>
                 </div>
                 <p>Brend: {data?.title}</p>
-                <p>Holati: <span>Sotuvda bor</span></p>
+                <p className={`sr__content-holat ${holat ? 'active' : ''}`}>Holati: <span>- Sotuvda bor</span></p>
                 <div className="sr__content-share">
                     <p>Uzatish: </p>
                     <li>
@@ -68,6 +69,15 @@ function SingleRoute() {
                     <li>
                         <FaWhatsapp />
                     </li>
+                </div>
+                <div className="sr__content-btns">
+                    <button className='sr__content-btn'>
+                        <img src="https://asaxiy.uz/custom-assets/images/cart-white.svg" alt="" />
+                        <span>Savatchaga qo'shish</span>
+                    </button>
+                    <button className='sr__content-btn'>
+                        <span>Bir klikda olish</span>
+                    </button>
                 </div>
             </div>
 

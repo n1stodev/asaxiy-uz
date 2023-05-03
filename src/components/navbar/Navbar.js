@@ -41,7 +41,7 @@ function Navbar() {
                     <img src="https://asaxiy.uz/custom-assets/images/logos/asaxiy-logo.svg" alt="" />
                 </Link>
                 <div className="nav__search">
-                    <input type="text" onBlur={inpBlur} placeholder='Qidirish' onChange={handleFilter} />
+                    <input type="text" placeholder='Qidirish' onChange={handleFilter} />
                     <button>
                         <FiSearch />
                         <span>Qidirish</span>
@@ -49,7 +49,7 @@ function Navbar() {
                     {filter.length != 0 && (
                         <div className="search_bar">{
                             filter?.map(e => (
-                                <Link className="search_barItem" key={e.id} to={`/product/${e.id}`} state={e}>
+                                <Link onClick={inpBlur} className="search_barItem" key={e.id} to={`/product/${e.id}`} state={e}>
                                     {(e.title).length > 40 ? `${(e.title).slice(0, 40)}...` : e.title}
                                 </Link>
                             ))
@@ -61,7 +61,7 @@ function Navbar() {
                 <div className="nav__links">
                     <NavLink to={'/'} className="nav__link">
                         <AiOutlineHome />
-                        <span>Bosh Sahifa</span>
+                        <span>Home</span>
                     </NavLink>
                     <NavLink to={'/payment'} className="nav__link">
                         <img src="https://asaxiy.uz/custom-assets/images/icons/header/payment.svg" alt="" />

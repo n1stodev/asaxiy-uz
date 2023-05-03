@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 // import required modules
-import { Navigation } from "swiper";
+import { Navigation, Autoplay } from "swiper";
 
 function LogoSwiper() {
     return (
@@ -16,10 +16,11 @@ function LogoSwiper() {
                     spaceBetween={30}
                     loop={true}
                     navigation={true}
-                    // pagination={{
-                    //     clickable: true,
-                    // }}
-                    modules={[Navigation]}
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false
+                    }}
+                    modules={[Navigation, Autoplay]}
                     className="mySwiper"
                 >
                     <SwiperSlide className='logo_swiper-item'>

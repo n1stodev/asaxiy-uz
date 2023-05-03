@@ -139,14 +139,64 @@
 .single-route__content h1 {
     font-weight: 500;
     color: #fe7300;
+    margin-bottom: 20px;
+}
+
+.sr__content-comment {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    margin-bottom: 20px;
+}
+
+.sr__content-comment svg {
+    color: var(--bg-py);
+    font-size: 18px;
+}
+
+.sr__content-comment span {
+    margin-left: 10px;
+    color: #999;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.sr__content-holat {
+    margin-top: 20px;
+}
+
+.sr__content-holat.active span {
+    color: #34D374;
+}
+
+.sr__content-btns {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.sr__content-btn {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background: #fe7300;
+    border: none;
+    outline: none;
+    gap: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.sr__content-btn img {
+    height: 22px;
 }
 
 @media screen and (max-width: 990px) {
-    .single_route {
-        flex-direction: column;
-    }
-    .single-route__content,
-    .single-route__images {
-        width: 100%;
+    .sr__imagesLeft {
+        display: none;
     }
 }

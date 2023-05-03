@@ -5,7 +5,9 @@ import {
     DEL_FROM_HEART,
     DROPDOWN,
     DEC_FROM_CART,
-    DEl_ALL_CART
+    DEl_ALL_CART,
+    LOG_IN,
+    LOG_OUT
 } from "./actionType"
 
 export const addToHeart = (payload) => {
@@ -34,4 +36,16 @@ export const decFromCart = (payload) => {
 
 export const delAllCart = () => {
     return { type: DEl_ALL_CART }
+}
+
+export const logIn = (payload) => {
+    return {
+        type: LOG_IN, payload
+    }
+}
+
+export const logOut = () => {
+    return {
+        type: LOG_OUT
+    }
 }
