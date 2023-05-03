@@ -9,6 +9,7 @@ import { db } from '../../server'
 import { collection, getDocs } from 'firebase/firestore'
 
 function Navbar() {
+    const [active, setActive] = useState(false)
     const [data, setData] = useState([])
     const productRef = collection(db, 'products')
     const [filter, setFilter] = useState([])
@@ -40,6 +41,7 @@ function Navbar() {
                 <Link to={'/'} className="nav__logo">
                     <img src="https://asaxiy.uz/custom-assets/images/logos/asaxiy-logo.svg" alt="" />
                 </Link>
+                <button onClick={() => setActive(!active)} className="nav__linkbtn"><FiMenu /></button>
                 <div className="nav__search">
                     <input type="text" placeholder='Qidirish' onChange={handleFilter} />
                     <button>
@@ -59,6 +61,32 @@ function Navbar() {
                     }
                 </div>
                 <div className="nav__links">
+                    <NavLink to={'/'} className="nav__link">
+                        <AiOutlineHome />
+                        <span>Home</span>
+                    </NavLink>
+                    <NavLink to={'/payment'} className="nav__link">
+                        <img src="https://asaxiy.uz/custom-assets/images/icons/header/payment.svg" alt="" />
+                        <span>To'lov</span>
+                    </NavLink>
+                    <NavLink to={'/order-status'} className="nav__link">
+                        <img src="https://asaxiy.uz/custom-assets/images/icons/header/tracker.svg" alt="" />
+                        <span>Trek</span>
+                    </NavLink>
+                    <NavLink to={'/cart'} className="nav__link">
+                        <img src="https://asaxiy.uz/custom-assets/images/icons/header/cart.svg" alt="" />
+                        <span>Savatcha</span>
+                    </NavLink>
+                    <NavLink to={'/wishlist'} className="nav__link">
+                        <img src="https://asaxiy.uz/custom-assets/images/icons/header/heart.svg" alt="" />
+                        <span>Sevimlilar</span>
+                    </NavLink>
+                    <NavLink to={'/login'} className="nav__link">
+                        <img src="https://asaxiy.uz/custom-assets/images/icons/header/avatar.svg" alt="" />
+                        <span>Кабинет</span>
+                    </NavLink>
+                </div>
+                <div className={`nav__links nav__links2 ${active ? 'active' : ''}`}>
                     <NavLink to={'/'} className="nav__link">
                         <AiOutlineHome />
                         <span>Home</span>

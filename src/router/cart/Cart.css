@@ -160,3 +160,37 @@
     border-radius: 7px;
     color: #fff;
 }
+@media screen and (max-width: 990px) {
+    .cart__body {
+        flex-direction: column;
+    }
+    .cart__form {
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 745px) {
+    .cart__box {
+        width: 100%;
+    }
+    .cart__item {
+        flex-direction: column;
+        gap: 15px;
+        width: 90%;
+        margin: auto;
+    }
+    .cart__item-pro {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .cart__item-price {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .cart__item {
+        width: 100%;
+    }
+}
