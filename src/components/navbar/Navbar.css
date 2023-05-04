@@ -19,6 +19,7 @@
 .navbar {
     height: 60px;
     display: flex;
+    width: 100%;
     align-items: center;
     gap: 24px;
 }
@@ -136,18 +137,31 @@
     border-radius: 7px;
     display: none;
 }
+.nav__bottom {
+    position: relative;
+}
+.nav_bottom-btn {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: #fff;
+    height: 100%;
+    padding: 0 10px;
+    z-index: 5;
+}
+
 @media screen and (max-width: 990px) {
-    .nav__links {
+    .nav__links1 {
         position: fixed;
         bottom: 0;
-        left: 0;
-        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
         height: 35px;
         border-top: 1px solid #ddd;
         background: #fff;
         z-index: 11;
-        gap: 0;
-        justify-content: space-evenly;
+        gap: 15px;
+        justify-content: space-around;
     }
     .nav__link {
         flex-direction: column;
@@ -243,5 +257,11 @@
     .nav__search {
         flex: none;
         width: 100%;
+    }
+}
+
+@media screen and (max-width) {
+    .nav__links1 {
+        max-width: 400px;
     }
 }

@@ -7,6 +7,9 @@ import { NAVBAR_BOTTOM_DATA } from '../../static'
 import '../search_bar/Search.css'
 import { db } from '../../server'
 import { collection, getDocs } from 'firebase/firestore'
+import { dropdown } from '../../context/action/action'
+import Dropdown from '../dropdown/Dropdown'
+import { useDispatch } from 'react-redux'
 
 function Navbar() {
     const [active, setActive] = useState(false)
@@ -14,6 +17,7 @@ function Navbar() {
     const productRef = collection(db, 'products')
     const [filter, setFilter] = useState([])
     const { pathname } = useLocation()
+    const dispatch = useDispatch()
 
     useEffect(() => {
         const fetchData = async () => {
@@ -60,7 +64,7 @@ function Navbar() {
                     )
                     }
                 </div>
-                <div className="nav__links">
+                <div className="nav__links nav__links1">
                     <NavLink to={'/'} className="nav__link">
                         <AiOutlineHome />
                         <span>Home</span>
@@ -115,7 +119,7 @@ function Navbar() {
             </div>
             <hr />
             <div className="nav__bottom container">
-                <button>
+                <button className='nav_bottom-btn' onClick={() => dispatch(dropdown())}>
                     <FiMenu />
                     <span>Barcha bo'limlar</span>
                 </button>
