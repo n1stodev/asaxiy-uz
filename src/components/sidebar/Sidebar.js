@@ -7,8 +7,10 @@ function Sidebar() {
     return (
         <div className='sidebar'>
             <h2>Admin Dashboard</h2>
-            <button onClick={() => navigate('/')}>Go Home</button>
             <ul>
+                <li>
+                    <button className='sidebar__btn' onClick={() => navigate('/')}>Go Home</button>
+                </li>
                 <li>
                     <NavLink className={'sidebar__link'} to={'/admin/create-product'}>Create Product</NavLink>
                 </li>

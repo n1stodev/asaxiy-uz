@@ -2,6 +2,9 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import './Wishlist.css'
 import { removeFromHeart, addToCart } from '../../context/action/action'
+import AboutApp from '../../components/about-app/AboutApp'
+import LogoSwiper from '../../components/logo-swiper/LogoSwiper'
+import Comforts from '../../components/comforts/Comforts'
 
 function Wishlist() {
     const dispatch = useDispatch()
@@ -34,6 +37,9 @@ function Wishlist() {
                     ))
                 }
             </div>
+            <AboutApp />
+            <LogoSwiper />
+            <Comforts />
         </div>
     )
 }

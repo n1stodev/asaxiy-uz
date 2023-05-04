@@ -4,6 +4,9 @@ import Products from '../../components/products/Products'
 import { db } from '../../server'
 import { collection, getDocs } from 'firebase/firestore'
 import AboutUs from '../../components/about-us/AboutUs'
+import AboutApp from '../../components/about-app/AboutApp'
+import LogoSwiper from '../../components/logo-swiper/LogoSwiper'
+import Comforts from '../../components/comforts/Comforts'
 
 function Home() {
     const [data, setData] = useState([])
@@ -21,6 +24,9 @@ function Home() {
             <Banner />
             <Products data={data} admin={false} like={true} />
             <AboutUs />
+            <AboutApp />
+            <LogoSwiper />
+            <Comforts />
         </div>
     )
 }

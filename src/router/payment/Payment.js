@@ -1,5 +1,8 @@
 import React from 'react'
 import './Payment.css'
+import AboutApp from '../../components/about-app/AboutApp'
+import LogoSwiper from '../../components/logo-swiper/LogoSwiper'
+import Comforts from '../../components/comforts/Comforts'
 
 function Payment() {
     return (
@@ -17,6 +20,9 @@ function Payment() {
                     <p>M - rassrochkani so'ndirish uchun</p>
                 </div>
             </div>
+            <AboutApp />
+            <LogoSwiper />
+            <Comforts />
         </div>
     )
 }

@@ -2,9 +2,6 @@ import React from 'react'
 import './App.css'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import Footer from './components/footer/Footer'
-import LogoSwiper from './components/logo-swiper/LogoSwiper'
-import Comforts from './components/comforts/Comforts'
-import AboutApp from './components/about-app/AboutApp'
 import Navbar from './components/navbar/Navbar'
 import Home from './router/home/Home'
 import Cart from './router/cart/Cart'
@@ -38,9 +35,6 @@ function App() {
                 <Route path='/login' element={<Login />} />
                 <Route path='/admin/*' element={<Admin />} />
             </Routes>
-            <LogoSwiper />
-            <AboutApp />
-            <Comforts />
             <Footer />
         </div>
     )

@@ -157,6 +157,7 @@
         left: 50%;
         transform: translateX(-50%);
         height: 35px;
+        width: 100%;
         border-top: 1px solid #ddd;
         background: #fff;
         z-index: 11;
@@ -202,6 +203,7 @@
         align-items: flex-start;
         padding: 20px;
         background: var(--bg-py);
+        z-index: 22;
     }
     .nav__links .nav__link {
         width: auto;

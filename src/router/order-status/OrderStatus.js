@@ -1,5 +1,8 @@
 import React from 'react'
 import './OrderStatus.css'
+import AboutApp from '../../components/about-app/AboutApp'
+import LogoSwiper from '../../components/logo-swiper/LogoSwiper'
+import Comforts from '../../components/comforts/Comforts'
 
 function OrderStatus() {
     return (
@@ -22,6 +25,9 @@ function OrderStatus() {
             <div className='order_status__img'>
                 <img src="https://asaxiy.uz/custom-assets/images/tracking.svg" alt="" />
             </div>
+            <AboutApp />
+            <LogoSwiper />
+            <Comforts />
         </div>
     )
 }

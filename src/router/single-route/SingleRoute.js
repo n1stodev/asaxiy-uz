@@ -5,6 +5,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import { FaFacebookF, FaTelegramPlane, FaTwitter, FaWhatsapp } from 'react-icons/fa'
 import { AiFillHeart, AiFillStar, AiOutlineHeart } from 'react-icons/ai'
 import { addToCart, removeFromHeart, addToHeart } from '../../context/action/action'
+import AboutApp from '../../components/about-app/AboutApp'
+import LogoSwiper from '../../components/logo-swiper/LogoSwiper'
+import Comforts from '../../components/comforts/Comforts'
 
 function SingleRoute() {
     const dispatch = useDispatch()
@@ -80,7 +83,9 @@ function SingleRoute() {
                     </button>
                 </div>
             </div>
-
+            <AboutApp />
+            <LogoSwiper />
+            <Comforts />
         </div>
     )
 }

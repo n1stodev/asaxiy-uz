@@ -17,7 +17,7 @@ function ManageProduct() {
         fetchData()
     }, [refresh])
     return (
-        <div>
+        <div className='container manage_product'>
             <h2>ManageProduct</h2>
             <Products data={data} setRefresh={setRefresh} admin={true} like={false} />
         </div>
