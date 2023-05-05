@@ -13,7 +13,7 @@
 }
 
 .cart__form {
-    width: 300px;
+    min-width: 300px;
     position: sticky;
     top: 10px;
     display: flex;

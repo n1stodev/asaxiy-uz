@@ -7,7 +7,10 @@ import {
     DEC_FROM_CART,
     DEl_ALL_CART,
     LOG_IN,
-    LOG_OUT
+    LOG_OUT,
+    ADD_TO_TOP,
+    DEL_FROM_TOP,
+    DEL_ALL_TOP
 } from "./actionType"
 
 export const addToHeart = (payload) => {
@@ -47,5 +50,23 @@ export const logIn = (payload) => {
 export const logOut = () => {
     return {
         type: LOG_OUT
+    }
+}
+
+export const addToTop = () => {
+    return {
+        type: ADD_TO_TOP
+    }
+}
+
+export const delAllTop = () => {
+    return {
+        type: DEL_ALL_TOP
+    }
+}
+
+export const delFromTop = () => {
+    return {
+        type: DEL_FROM_TOP
     }
 }

@@ -9,7 +9,7 @@ import Comforts from '../../components/comforts/Comforts'
 function Cart() {
     const cart = useSelector(s => s.cart)
     return (
-        <div className='cart container'>
+        <div className='cart'>
             <CartComponent cart={cart} />
             <AboutApp />
             <LogoSwiper />

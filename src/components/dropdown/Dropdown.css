@@ -1,15 +1,15 @@
 .dropdown {
     position: fixed;
-    left: 5%;
-    width: 20%;
+    left: 20px;
+    width: 200px;
     background: #fff;
     border-radius: 7px;
-    box-shadow: 0 2px 10px #0001;
+    box-shadow: 0 0 10px #0002;
     padding: 15px;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    top: 70px;
+    top: 125px;
     overflow-y: hidden;
 }
 

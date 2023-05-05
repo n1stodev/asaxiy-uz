@@ -1,0 +1,21 @@
+.empty {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.empty img {
+    filter: hue-rotate(195deg);
+    width: 300px;
+    transform: translateY(-40px);
+    height: 300px;
+    margin-bottom: 25px;
+}
+
+.empty p {
+    transform: translateY(-40px);
+    font-size: 18px;
+    width: 55%;
+    text-align: center;
+}

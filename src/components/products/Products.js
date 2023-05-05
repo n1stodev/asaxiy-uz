@@ -3,7 +3,7 @@ import './Products.css'
 import { AiOutlineHeart, AiOutlineShoppingCart, AiFillHeart, AiOutlineDelete, AiFillStar } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { addToHeart, addToCart, removeFromHeart } from '../../context/action/action'
+import { addToHeart, addToCart, removeFromHeart, delAllTop, delFromTop, addToTop } from '../../context/action/action'
 import { db } from '../../server'
 import { collection, deleteDoc, doc } from 'firebase/firestore'
 import { ToastContainer, toast } from 'react-toastify'
@@ -46,6 +46,7 @@ function Products({ data, admin, like, setRefresh }) {
                                             <AiOutlineShoppingCart className='pro__img4' onClick={() => {
                                                 toast.success("Muvaffaqiyatli qo'shildi")
                                                 dispatch(addToCart(item))
+                                                dispatch(addToTop())
                                             }} />
                                     }
                                     {

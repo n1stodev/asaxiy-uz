@@ -9,14 +9,16 @@ import { db } from '../../server'
 import { collection, getDocs } from 'firebase/firestore'
 import { dropdown } from '../../context/action/action'
 import Dropdown from '../dropdown/Dropdown'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
-function Navbar({ cart }) {
+function Navbar() {
     const [active, setActive] = useState(false)
     const [data, setData] = useState([])
     const productRef = collection(db, 'products')
     const [filter, setFilter] = useState([])
     const { pathname } = useLocation()
+    const cart = useSelector(s => s.cart)
+    const heart = useSelector(s => s.heart)
     const dispatch = useDispatch()
     useEffect(() => {
         const fetchData = async () => {
@@ -79,12 +81,12 @@ function Navbar({ cart }) {
                     <NavLink to={'/cart'} className="nav__link">
                         <img src="https://asaxiy.uz/custom-assets/images/icons/header/cart.svg" alt="" />
                         <span>Savatcha</span>
-                        <div>{ }</div>
+                        <div>{cart.reduce((a, b) => a + b.soni, 0)}</div>
                     </NavLink>
                     <NavLink to={'/wishlist'} className="nav__link">
                         <img src="https://asaxiy.uz/custom-assets/images/icons/header/heart.svg" alt="" />
                         <span>Sevimlilar</span>
-                        <div>0</div>
+                        <div>{heart.length}</div>
                     </NavLink>
                     <NavLink to={'/login'} className="nav__link">
                         <img src="https://asaxiy.uz/custom-assets/images/icons/header/avatar.svg" alt="" />
@@ -92,27 +94,27 @@ function Navbar({ cart }) {
                     </NavLink>
                 </div>
                 <div className={`nav__links nav__links2 ${active ? 'active' : ''}`}>
-                    <NavLink to={'/'} className="nav__link">
+                    <NavLink to={'/'} onClick={() => setActive(!active)} className="nav__link">
                         <AiOutlineHome />
                         <span>Home</span>
                     </NavLink>
-                    <NavLink to={'/payment'} className="nav__link">
+                    <NavLink to={'/payment'} onClick={() => setActive(!active)} className="nav__link">
                         <img src="https://asaxiy.uz/custom-assets/images/icons/header/payment.svg" alt="" />
                         <span>To'lov</span>
                     </NavLink>
-                    <NavLink to={'/order-status'} className="nav__link">
+                    <NavLink to={'/order-status'} onClick={() => setActive(!active)} className="nav__link">
                         <img src="https://asaxiy.uz/custom-assets/images/icons/header/tracker.svg" alt="" />
                         <span>Trek</span>
                     </NavLink>
-                    <NavLink to={'/cart'} className="nav__link">
+                    <NavLink to={'/cart'} onClick={() => setActive(!active)} className="nav__link">
                         <img src="https://asaxiy.uz/custom-assets/images/icons/header/cart.svg" alt="" />
                         <span>Savatcha</span>
                     </NavLink>
-                    <NavLink to={'/wishlist'} className="nav__link">
+                    <NavLink to={'/wishlist'} onClick={() => setActive(!active)} className="nav__link">
                         <img src="https://asaxiy.uz/custom-assets/images/icons/header/heart.svg" alt="" />
                         <span>Sevimlilar</span>
                     </NavLink>
-                    <NavLink to={'/login'} className="nav__link">
+                    <NavLink to={'/login'} onClick={() => setActive(!active)} className="nav__link">
                         <img src="https://asaxiy.uz/custom-assets/images/icons/header/avatar.svg" alt="" />
                         <span>Кабинет</span>
                     </NavLink>
@@ -129,6 +131,7 @@ function Navbar({ cart }) {
                         <span className='nav__btm-span' key={inx}>{e}</span>
                     ))
                 }
+                <Dropdown />
             </div>
         </div>
     )

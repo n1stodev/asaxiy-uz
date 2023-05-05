@@ -79,6 +79,10 @@
     position: relative;
 }
 
+.nav__bottom {
+    position: relative;
+}
+
 .nav__link div {
     position: absolute;
     top: -5px;
@@ -155,13 +159,13 @@
 .nav__bottom {
     position: relative;
 }
-.nav_bottom-btn {
+.nav__bottom button {
     position: sticky;
-    top: 0;
-    left: 0;
     background: #fff;
-    height: 100%;
-    padding: 0 10px;
+    top: 0;
+    left: -20px;
+    height: 30px;
+    padding: 0 10px 0 20px;
     z-index: 5;
 }
 

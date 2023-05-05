@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 import { BsTrash3 } from 'react-icons/bs'
 import { useDispatch } from 'react-redux'
 import { addToCart, decFromCart, delAllCart, removeFromCart } from '../../context/action/action'
+import Empty from '../empty/Empty'
 
 const TOKEN = `6036131094:AAHMSgA9MYrF8RzmMY0WAcBX8hDKAEmu9Og`
 const CHAT_ID = `5782739679`
@@ -43,6 +44,7 @@ function Cart({ cart }) {
         <div className='container cart'>
             <h2 className="page__title">Savatcha</h2>
             <div className="cart__body">
+                {!cart.length && <Empty text={"Savatcha hozircha bo'sh. Bu yerga mahsulot qo'shish uchun savatcha ustiga bosing."} />}
                 <div className="cart__box">
                     {
                         cart?.map(e => (
