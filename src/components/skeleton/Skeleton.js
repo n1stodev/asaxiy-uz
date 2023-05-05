@@ -6,7 +6,7 @@ function Skeleton() {
         <div className="skeleton container">
             {new Array(5).fill("").map((_, inx) => (
                 <div key={inx} className="skeleton__card">
-                    <div className="skeleton__image"></div>
+                    <div className="skeleton__img"></div>
                     <div className="skeleton__title"></div>
                     <div className="skeleton__price"></div>
                 </div>

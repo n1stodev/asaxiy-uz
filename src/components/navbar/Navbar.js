@@ -11,14 +11,13 @@ import { dropdown } from '../../context/action/action'
 import Dropdown from '../dropdown/Dropdown'
 import { useDispatch } from 'react-redux'
 
-function Navbar() {
+function Navbar({ cart }) {
     const [active, setActive] = useState(false)
     const [data, setData] = useState([])
     const productRef = collection(db, 'products')
     const [filter, setFilter] = useState([])
     const { pathname } = useLocation()
     const dispatch = useDispatch()
-
     useEffect(() => {
         const fetchData = async () => {
             const getData = await getDocs(productRef)
@@ -80,10 +79,12 @@ function Navbar() {
                     <NavLink to={'/cart'} className="nav__link">
                         <img src="https://asaxiy.uz/custom-assets/images/icons/header/cart.svg" alt="" />
                         <span>Savatcha</span>
+                        <div>{ }</div>
                     </NavLink>
                     <NavLink to={'/wishlist'} className="nav__link">
                         <img src="https://asaxiy.uz/custom-assets/images/icons/header/heart.svg" alt="" />
                         <span>Sevimlilar</span>
+                        <div>0</div>
                     </NavLink>
                     <NavLink to={'/login'} className="nav__link">
                         <img src="https://asaxiy.uz/custom-assets/images/icons/header/avatar.svg" alt="" />

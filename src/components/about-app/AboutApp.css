@@ -48,3 +48,13 @@
         align-items: center;
     }
 }
+
+@media screen and (max-width: 500px) {
+    .about_app-bodyApps {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .about_app-bodyApps img {
+        height: 45px;
+    }
+}

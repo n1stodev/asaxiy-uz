@@ -76,6 +76,21 @@
     font-size: 12px;
     font-weight: 400;
     width: 37px;
+    position: relative;
+}
+
+.nav__link div {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: var(--bg-py);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    outline: 1px solid #fff;
+    display: grid;
+    place-items: center;
+    color: #fff;
 }
 
 .nav__link img {
