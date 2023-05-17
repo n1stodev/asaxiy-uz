@@ -58,18 +58,20 @@
     border-radius: 25px;
     position: relative;
     box-shadow: 2px 2px 10px #0001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .sr__imagesRight img {
-    width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 25px;
 }
 
 .sr__contentTop {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     position: absolute;
@@ -78,8 +80,8 @@
 }
 
 .sr__contentTop button {
-    width: 50px;
-    height: 50px;
+    width: 100%;
+    height: 100%;
     border: none;
     outline: none;
     display: flex;
@@ -198,5 +200,30 @@
 @media screen and (max-width: 990px) {
     .sr__imagesLeft {
         display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .single_route {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .single-route__content,
+    .single-route__images {
+        width: 100%;
+        height: 340px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .sr__imagesRight {
+        width: 300px;
+        height: 300px;
+    }
+    .sr__contentTop {
+        width: 35px;
+        height: 35px;
+        top: 10px;
+        right: 10px;
     }
 }

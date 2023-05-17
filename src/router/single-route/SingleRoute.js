@@ -19,15 +19,13 @@ function SingleRoute() {
             <div className='single_route container'>
                 <div className="single-route__images">
                     <div className="sr__imagesLeft">
-                        <div className="sr__imagesLeftItem active">
-                            <img src={data?.images[0]} alt="" />
-                        </div>
-                        <div className="sr__imagesLeftItem">
-                            <img src={data?.images[1]} alt="" />
-                        </div>
-                        <div className="sr__imagesLeftItem">
-                            <img src={data?.images[2]} alt="" />
-                        </div>
+                        {
+                            data?.images?.map((e, inx) => (
+                                <div className="sr__imagesLeftItem active" key={inx}>
+                                    <img src={e} alt="" />
+                                </div>
+                            ))
+                        }
                     </div>
                     <div className="sr__imagesRight">
                         <img src={data?.images[0]} alt="" />
